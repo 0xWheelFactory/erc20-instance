@@ -13,7 +13,7 @@ npm install erc20-instance
 - Only use common ERC20 ABI:
 
   ```javascript
-    import { ERC20ABI } from "erc20-instance/src";
+    import { ERC20ABI } from "erc20-instance";
 
     const erc20Token = new Contract(contractAddress, ERC20ABI, provider);
   ```
@@ -23,7 +23,7 @@ npm install erc20-instance
   For my personal preference, I also introduce a pre-defined type `ERC20Contract` to help support typescript better. `ERC20Contract` is a type generated from a common ERC20 contract code with the tool [`Typechain`](https://www.npmjs.com/package/typechain).
 
   ```typescript
-    import { createERC20Instance } from "erc20-instance/src";
+    import { createERC20Instance } from "erc20-instance";
 
     let erc20Token = createERC20Instance(contractAddress, provider);
   ```
